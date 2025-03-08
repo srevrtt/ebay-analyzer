@@ -1,20 +1,40 @@
-# eBay Pricing Info Tool (v1.0)
+# eBay Analyzer
 
 ## About
 
-This tool is a simple, web-based informational tool that allows you to get certain information from a quick copy-and-paste of an eBay search page. It gives the average price of all listings, the average shipping price of all listings, and the recommended price for a listing. Keep in mind that this price should be used as a "point in the right direction" for the actual price of your listing.
+This tool is a simple, accurate, and 100% local informational tool that allows you to see the averages of eBay prices. It works similar to [AverageFinder](https://averagefinder.com/AverageFinder), but instead of fetching URLS and scraping the HTML code, eBay Analyzer simply reads directly from a copy'd and paste'd text blob directly from eBay's website. This approach is faster and more precise than AverageFinder's approach. Plus, the tool is 100% local. No server is required.
 
-## Motivation
+## Why use this?
 
-I built this tool because I wanted to get into flipping items for a profit on eBay. I created it with the intent of saving time on calculating a spreadsheet filled with different listings manually. All you have to do with this tool is copy all of the page content and simply paste it into the big textarea and click the button. It spits out all kinds of useful information such as average pricing (shipping price and listing price) and even gives you an _inferred_, _recommended_ price for a listing.
+I personally use this tool for reselling (flipping). When buying something to resell, I use this tool to find how much that item goes for on eBay, and from there I figure out if buying that item is worth it based on how much room I would have for profit. This is just one use for this tool; you could also use it to see if you're getting a good deal on an item.
 
-## How do you run this?
+## How do I use this?
 
-Visit the website (https://srevrtt.github.io/ebay-flipping-tool/ebaypricinginfo.html) or download the `ebaypricinginfo.html` file.
+Here are the steps to use this tool:
 
-## Disclaimer
+1. Go to the [eBay Website](https://ebay.com) and search for the item you want to see the averages for.
+2. Apply all of the filters that you want for the item. The more filters you have, the more accurate the averages will be.
+3. Copy the content of the entire webpage. Do this by selecting everything (CTRL-A or CMD-A) and copying it (CTRL-C or CMD-C).
+4. Paste the webpage contents into the textbox.
+5. Click the "Analyze" button and look at the results.
 
-**As stated in the license, I, the developer, am not responsible for any type of loss resulting from the use of this tool.** This tool is meant to serve as a reference/guide for your pricing. This means that this isn't the magic tool to solve all of your problems, nor is the output produced by the tool financial advice. In other words, this tool is far from perfect.
+## How do you run this locally?
+
+Make sure you have NodeJS and npm installed.
+
+1. Download the Git repository either through Github or by using `git clone`. If you downloaded the repo through Github, make sure to unzip it.
+2. Open the terminal in the directory you have the project in. (e.g. `~/Downloads/ebay-analyzer` or `/home/Downloads/ebay-analyzer`)
+
+Run these commands in order:
+
+```bash
+$ npm install
+$ npm run build
+```
+
+The HTML file should be in the `dist` directory.
+
+NOTE: You might need something like [local-web-server](https://www.npmjs.com/package/local-web-server) to run the tool locally. This is because of CORS.
 
 ## License
 
