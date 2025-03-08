@@ -3,44 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eBay Pricing Summary Tool</title>
+    <title>eBay Analyer</title>
   </head>
   <body>
-    <h1>eBay Pricing Summary Tool v1.0</h1>
+    <h1>eBay Analyzer</h1>
 
-    <h3>How do you use it? (instructions for the nerds)</h3>
+    <h3>How do you use it?</h3>
     <ol>
       <li>
         Go to <a href="https://ebay.com" target="_blank">eBay</a> and search for
         the item you want to flip. Go back to this page.
       </li>
       <li>
-        Select everything with CTRL-A or CMD-A if you're on a Mac. Copy the
+        Select everything with CTRL-A (Windows) or CMD-A (macOS). Copy the
         selection.
       </li>
       <li>
         Paste the selection into the box below. Optionally configure how you
         want to calculate your maximum profit.
-      </li>
-      <li>Click the "Analyze" button below and read the results.</li>
-    </ol>
-
-    <h3>How do you use it? (instructions for the non tech-savvy people)</h3>
-    <ol>
-      <li>
-        Go to <a href="https://ebay.com" target="_blank">eBay</a> and search for
-        the item you want to flip. Don't do anything else.
-      </li>
-      <li>
-        Go back to the eBay page and press CTRL-A (COMMAND-A on a Mac) to select
-        all of the page. Copy (CTRL-C or COMMAND-C) everything. Make sure that
-        everything is still highlighted when you copied and pasted!
-      </li>
-      <li>
-        Click the box below and paste your selection (Just press CTRL-V or
-        COMMAND-V). Optionally configure how you want to calculate your maximum
-        profit by clicking on the box below the "Mode" heading, selecting which
-        option you want, and clicking outside of the box.
       </li>
       <li>Click the "Analyze" button below and read the results.</li>
     </ol>
@@ -56,7 +36,7 @@
     <br />
     <br />
 
-    <h3>Input (NOTE: this only works for items priced under $10,000!):</h3>
+    <h3>Input:</h3>
     <textarea
       name="input"
       id="input"
@@ -78,6 +58,6 @@
       <h4 id="recommended-price">Recommended Price: $0</h4>
     </div>
 
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="src/main.ts"></script>
   </body>
 </html>
