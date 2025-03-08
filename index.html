@@ -4,58 +4,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>eBay Analyer</title>
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <h1>eBay Analyzer</h1>
+    <main>
+      <h1>eBay Analyzer</h1>
 
-    <h3>How do you use it?</h3>
-    <ol>
-      <li>
-        Go to <a href="https://ebay.com" target="_blank">eBay</a> and search for
-        the item you want to flip. Go back to this page.
-      </li>
-      <li>
-        Select everything with CTRL-A (Windows) or CMD-A (macOS). Copy the
-        selection.
-      </li>
-      <li>
-        Paste the selection into the box below. Optionally configure how you
-        want to calculate your maximum profit.
-      </li>
-      <li>Click the "Analyze" button below and read the results.</li>
-    </ol>
+      <h3>How do you use it?</h3>
+      <ol>
+        <li>
+          Go to <a href="https://ebay.com" target="_blank">eBay</a> and search
+          for the item you want to flip. Go back to this page.
+        </li>
+        <li>
+          Select everything with CTRL-A (Windows) or CMD-A (macOS). Copy the
+          selection.
+        </li>
+        <li>
+          Paste the selection into the box below. Optionally configure how you
+          want to calculate your maximum profit.
+        </li>
+        <li>Click the "Analyze" button below and read the results.</li>
+      </ol>
 
-    <hr />
+      <hr />
 
-    <h3>Input:</h3>
-    <textarea
-      name="input"
-      id="input"
-      placeholder="Paste in the page here."
-      cols="125"
-      rows="30"
-    ></textarea>
-
-    <br />
-    <br />
-
-    <button id="analyze">Analyze</button>
-
-    <div id="results">
-      <h3>Results</h3>
-
-      <p id="average-price">Average Price: $0</p>
-      <p id="average-shipping">Average Shipping Price: $0</p>
-
-      <b>Data:</b>
-      <br />
+      <h3>Input:</h3>
       <textarea
-        name="price-data"
-        rows="25"
-        cols="50"
-        id="price-data"
+        name="input"
+        id="input"
+        placeholder="Paste in the page here."
+        cols="125"
+        rows="30"
       ></textarea>
-    </div>
+
+      <br />
+      <br />
+
+      <button id="analyze">Analyze</button>
+
+      <div id="results">
+        <h3>Results</h3>
+
+        <p id="average-price">Average Price: $0</p>
+        <p id="average-shipping">Average Shipping Price: $0</p>
+
+        <b>Data:</b>
+        <br />
+        <textarea
+          name="price-data"
+          rows="25"
+          cols="50"
+          id="price-data"
+        ></textarea>
+      </div>
+    </main>
 
     <script type="module" src="src/main.ts"></script>
   </body>
