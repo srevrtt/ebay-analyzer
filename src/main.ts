@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('average-shipping')
   );
 
+  const priceData = <HTMLTextAreaElement>document.getElementById('price-data');
+
   // Hide the results for now until we calculate them.
   results.style.display = 'none';
 
@@ -114,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     averageShipping.innerHTML =
       'Average Shipping Price: $' + shipPriceAverage.toFixed(2);
 
+    priceData.value = filteredLines.toString();
     results.style.display = 'block';
   });
 });
