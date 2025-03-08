@@ -82,16 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Now, let's interpret this data.
     filteredLines.forEach((value) => {
+      // Remove commas from the numbers
+      let val = value.replace(',', '');
+
       // Listing prices
-      if (value[0] == '$') {
-        let num = parseFloat(value.substring(1));
+      if (val[0] == '$') {
+        let num = parseFloat(val.substring(1));
         prices.push(num);
         return;
       }
 
       // Shipping prices
-      if (value[0] == '+') {
-        let str = value.substring(2).split(' d')[0];
+      if (val[0] == '+') {
+        let str = val.substring(2).split(' d')[0];
         shippingPrices.push(parseFloat(str));
       }
     });
